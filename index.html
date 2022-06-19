@@ -66,13 +66,15 @@
       // akan menjalankan fungsi fnClickHandler
       button.addEventListener('click', () => {
         output.append(fnClickHandler(input.value))
+        input.value = '';
       })
 
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
       input.addEventListener("keypress", (event) => {
-        if (event.key == "enter"){
+        if (event.which == 13){
           output.append(fnClickHandler(input.value))
+          input.value = '';
         }
       })
 
