@@ -59,20 +59,20 @@
       function fnClickHandler(toDoItem) {
         let li = document.createElement('li')
         li.textContent = toDoItem;
-        return output.append(li);
+        return li;
       }
 
       // TODO: register event onclick / addEventListener untuk button
       // akan menjalankan fungsi fnClickHandler
       button.addEventListener('click', () => {
-        fnClickHandler(input.value)
+        output.append(fnClickHandler(input.value))
       })
 
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
       input.addEventListener("keypress", (event) => {
         if (event.key == "enter"){
-          fnClickHandler(input.value)
+          output.append(fnClickHandler(input.value))
         }
       })
 
