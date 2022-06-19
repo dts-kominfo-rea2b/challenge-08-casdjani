@@ -51,7 +51,6 @@
       let button = document.querySelector("#todo-submit");
       let input = document.querySelector('#todo-input');
       let output = document.querySelector('#todo-output');
-      let todoList = []
 
       // TODO: Buatlah sebuah fungsi dengan nama fnClickHandler
       // Fungsi yang digunakan untuk menambahkan tulisan
@@ -65,7 +64,7 @@
       // TODO: register event onclick / addEventListener untuk button
       // akan menjalankan fungsi fnClickHandler
       button.addEventListener('click', () => {
-        output.append(fnClickHandler(input.value))
+        output.appendChild(fnClickHandler(input.value))
         input.value = '';
       })
 
@@ -73,7 +72,7 @@
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
       input.addEventListener("keypress", (event) => {
         if (event.which == 13){
-          output.append(fnClickHandler(input.value))
+          output.appendChild(fnClickHandler(input.value))
           input.value = '';
         }
       })
